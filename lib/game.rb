@@ -2,12 +2,20 @@ require_relative 'game_board'
 
 class Game
 
-  _WINNERS =
-
   attr_reader :game_board
 
   def initialize
     @game_board = GameBoard.new
+  end
+
+  def game_status(game_board)
+    if !game_over?(game_board)
+      puts "Game still in progress"
+    elsif row_winner?(game_board) || column_winner?(game_board) || diagonal_winner?(game_board)
+      puts "Game over Somebody won"
+    else tie?(game_board)
+      puts "It was a tie"
+    end
   end
 
   def game_over?(game_board)
@@ -50,7 +58,5 @@ class Game
     end
     test.length == 3
   end
-
-
 
 end
