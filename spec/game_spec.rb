@@ -5,8 +5,8 @@ describe Game do
   subject {described_class.new}
 
   row_winner = [['','',''],['','',''],['X','X','X']]
-  column_winner = [['','','X'],['','','X'],['','','X']]
-  diagonal_winner = [['X','',''],['','X',''],['','','X']]
+  column_winner = [['','O','X'],['X','O','X'],['','O','']]
+  diagonal_winner = [['O','',''],['','O',''],['','','O']]
   draw = [['O','O','X'],['X','O','O'],['O','X','X']]
 
   describe '#initialize' do
@@ -24,6 +24,18 @@ describe Game do
   describe '#column_winner?' do
     it 'returns true it there is a complete column in the game board' do
       expect(subject.column_winner?(column_winner)).to eq true
+    end
+  end
+
+  describe '#diagonal_winner?' do
+    it 'returns true it there is a complete diagonal in the game board' do
+      expect(subject.diagonal_winner?(diagonal_winner)).to eq true
+    end
+  end
+
+  describe '#tie?' do
+    it 'returns true it the game is tied' do
+      expect(subject.tie?(draw)).to eq true
     end
   end
 
