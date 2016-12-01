@@ -7,4 +7,15 @@ class GameBoard
     @game_board = [['','',''],['','',''],['','','']]
   end
 
+  def add_move(o_or_x, row_num, column_num)
+    @game_board[row_num - 1][column_num - 1] = o_or_x
+  end
+
+  def o_or_x?(o_or_x)
+    o_or_x.upcase == "O" || o_or_x.upcase == "X"
+  end
+
+  def valid_move?(row_num, column_num)
+  end
+
 end
