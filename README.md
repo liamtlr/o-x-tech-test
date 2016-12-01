@@ -1,17 +1,33 @@
-# Rough User stories
+# Noughts and Crosses tech test
 
-As a user,
-So that I can play noughts and crosses
-I want to be able to select a place to put my X or O
+A simple noughts and crosses game built in Ruby as part of Makers tech-test week
 
-As a user,
-So that I can plan my next move
-I want to see which fields are already taken
+## Setup
 
-As a user,
-So that I can play a proper game
-I want to be unable to take a field that is already taken
+Navigate to your chosen folder and from the command line enter the following:
 
-As a user,
-So that I know who has won
-I want to be able to see the outcome of the game once it is complete
+```
+git clone https://github.com/wirsindpapst/o-x-tech-test.git
+gem install bundler
+bundle
+```
+
+## Testing
+
+Tested using RSpec. To see the test outcome, run:
+
+```
+rspec
+```
+
+## Running the script
+
+To run the script as a simple command line application, run:
+
+```
+irb -r ./lib/interface.rb
+interface = interface.new
+interface.new_game
+```
+
+And follow the onscreen instructions
