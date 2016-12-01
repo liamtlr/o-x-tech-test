@@ -15,6 +15,10 @@ class GameBoard
     end
   end
 
+  def reset_board
+    @game_board = [['','',''],['','',''],['','','']]
+  end
+
   def o_or_x?(o_or_x)
     o_or_x.upcase == "O" || o_or_x.upcase == "X"
   end
@@ -25,10 +29,6 @@ class GameBoard
 
   def game_board
     @game_board.dup
-  end
-
-  def reset_board
-    @game_board = [['','',''],['','',''],['','','']]
   end
 
 end

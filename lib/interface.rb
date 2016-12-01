@@ -15,6 +15,8 @@ class Interface
     turn(@current_player)
   end
 
+  private
+
   def turn(current_player)
     puts "#{@current_player}'s turn. Place #{return_x_or_o}"
     puts "Enter a row number"
