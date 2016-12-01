@@ -39,4 +39,14 @@ class Game
     end
   end
 
+  def tie?(game_board)
+    test = game_board.select do |x|
+      without_blanks = x.reject {|index| index.empty?}
+      without_blanks.length == x.length
+    end
+    test.length == 3
+  end
+
+
+
 end

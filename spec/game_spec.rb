@@ -8,6 +8,8 @@ describe Game do
   column_winner = [['','O','X'],['X','O','X'],['','O','']]
   diagonal_winner = [['O','',''],['','O',''],['','','O']]
   draw = [['O','O','X'],['X','O','O'],['O','X','X']]
+  incomplete_game = [['O','O',''],['X','O','O'],['O','X','X']]
+
 
   describe '#initialize' do
     it 'starts with a game board' do
@@ -34,8 +36,11 @@ describe Game do
   end
 
   describe '#tie?' do
-    it 'returns true it the game is tied' do
+    it 'returns true if the game is tied' do
       expect(subject.tie?(draw)).to eq true
+    end
+    it 'returns false it the game is incomplete' do
+      expect(subject.tie?(incomplete_game)).to eq false
     end
   end
 
