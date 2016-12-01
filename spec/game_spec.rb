@@ -10,6 +10,9 @@ describe Game do
   draw = [['O','O','X'],['X','O','O'],['O','X','X']]
   incomplete_game = [['O','O',''],['X','O','O'],['O','X','X']]
 
+  incomplete_game = [['X','X','X'],['X','O','O'],['O','O','X']]
+
+
 
   describe '#initialize' do
     it 'starts with a game board' do
