@@ -10,19 +10,23 @@ class Game
     @game_board = GameBoard.new
   end
 
+  def game_over?(game_board)
+    row_winner?(game_board) || column_winner?(game_board) || diagonal_winner?(game_board) || tie?(game_board)
+  end
+
   def row_winner?(game_board)
     test = game_board.select do |row|
-      row == ['X','X','X'] || ['O','O','O']
+      outcome = row == ['X','X','X'] || row == ['O','O','O']
     end
-    !test.nil?
+    !test.empty?
   end
 
   def column_winner?(game_board)
     game_board = game_board.transpose
     test = game_board.select do |row|
-      row == ['X','X','X'] || ['O','O','O']
+      row == ['X','X','X'] || row == ['O','O','O']
     end
-    !test.nil?
+    !test.empty?
   end
 
   def diagonal_winner?(game_board)
