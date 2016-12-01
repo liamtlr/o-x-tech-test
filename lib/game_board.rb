@@ -27,4 +27,8 @@ class GameBoard
     @game_board.dup
   end
 
+  def reset_board
+    @game_board = [['','',''],['','',''],['','','']]
+  end
+
 end
