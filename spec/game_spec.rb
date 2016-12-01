@@ -10,15 +10,6 @@ describe Game do
   draw = [['O','O','X'],['X','O','O'],['O','X','X']]
   incomplete_game = [['O','O',''],['X','O','O'],['O','X','X']]
 
-  incomplete_game = [['X','X','X'],['X','O','O'],['O','O','X']]
-
-
-
-  describe '#initialize' do
-    it 'starts with a game board' do
-      expect(subject.game_board).to be_an_instance_of GameBoard
-    end
-  end
 
   describe 'game_over?' do
     it 'returns true if the game is over as someone has won' do

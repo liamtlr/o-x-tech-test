@@ -2,11 +2,7 @@ require_relative 'game_board'
 
 class Game
 
-  attr_reader :game_board
-
-  def initialize
-    @game_board = GameBoard.new
-  end
+  attr_reader
 
   def game_status(game_board)
     if !game_over?(game_board)

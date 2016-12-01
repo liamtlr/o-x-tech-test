@@ -29,13 +29,17 @@ class Interface
     if !@game.game_over?(@game_board.game_board)
       switch_turns
     else
-      if @game.game_status(@game_board.game_board) == "Game over Somebody won"
-        puts "#{@current_player} won!"
-        new_game
-      else
-        puts 'It was a tie :('
-        new_game
-      end
+      return_outcome
+    end
+  end
+
+  def return_outcome
+    if @game.game_status(@game_board.game_board) == "Game over Somebody won"
+      puts "#{@current_player} won!"
+      exit
+    else
+      puts 'It was a tie :('
+      exit
     end
   end
 
@@ -65,12 +69,12 @@ class Interface
   end
 
   def display_game_board
-    puts "   1      2      3"
-    puts "1| #{@game_board.game_board[0][0]}  |  #{@game_board.game_board[0][1]}   |   #{@game_board.game_board[0][2]}"
+    puts "   1    2     3"
+    puts "1| #{@game_board.game_board[0][0]}  | #{@game_board.game_board[0][1]}   |   #{@game_board.game_board[0][2]}"
     puts "  ---------------"
-    puts "2| #{@game_board.game_board[1][0]}  |   #{@game_board.game_board[1][1]}  |   #{@game_board.game_board[1][2]}"
+    puts "2| #{@game_board.game_board[1][0]}  |  #{@game_board.game_board[1][1]}  |   #{@game_board.game_board[1][2]}"
     puts "  ---------------"
-    puts "3| #{@game_board.game_board[2][0]}  |   #{@game_board.game_board[2][1]}  |   #{@game_board.game_board[2][2]}"
+    puts "3| #{@game_board.game_board[2][0]}  |  #{@game_board.game_board[2][1]}  |   #{@game_board.game_board[2][2]}"
   end
 
 
