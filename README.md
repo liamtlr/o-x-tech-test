@@ -1,6 +1,6 @@
 # Noughts and Crosses tech test
 
-A simple noughts and crosses game built in Ruby as part of Makers tech-test week
+A simple noughts and crosses script built in Ruby as part of Makers tech-test week
 
 ## Setup
 
@@ -26,8 +26,8 @@ To run the script as a simple command line application, run:
 
 ```
 irb -r ./lib/interface.rb
-interface = interface.new
-interface.new_game
+interface = Interface.new
+nterface.new_game
 ```
 
 And follow the onscreen instructions
