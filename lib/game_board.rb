@@ -23,12 +23,4 @@ class GameBoard
     (1..3).include?(row_num) && (1..3).include?(column_num) && @game_board[row_num - 1][column_num - 1].empty?
   end
 
-  def display_game_board
-    puts "#{@game_board[0][0]}   |   #{@game_board[0][1]}   |   #{@game_board[0][2]}"
-    puts "-------------"
-    puts "#{@game_board[1][0]}   |   #{@game_board[1][1]}   |   #{@game_board[1][2]}"
-    puts "-------------"
-    puts "#{@game_board[2][0]}   |   #{@game_board[2][1]}   |   #{@game_board[2][2]}"
-  end
-
 end

@@ -10,11 +10,11 @@ class Game
 
   def game_status(game_board)
     if !game_over?(game_board)
-      puts "Game still in progress"
+      "Game still in progress"
     elsif row_winner?(game_board) || column_winner?(game_board) || diagonal_winner?(game_board)
-      puts "Game over Somebody won"
+      "Game over Somebody won"
     else tie?(game_board)
-      puts "It was a tie"
+      "It was a tie"
     end
   end
 
