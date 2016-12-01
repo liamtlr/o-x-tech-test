@@ -19,18 +19,16 @@ class Game
   end
 
   def row_winner?(game_board)
-    test = game_board.select do |row|
-      outcome = row == ['X','X','X'] || row == ['O','O','O']
+    test = game_board.any? do |row|
+      row == ['X','X','X'] || row == ['O','O','O']
     end
-    !test.empty?
   end
 
   def column_winner?(game_board)
     game_board = game_board.transpose
-    test = game_board.select do |row|
+    test = game_board.any? do |row|
       row == ['X','X','X'] || row == ['O','O','O']
     end
-    !test.empty?
   end
 
   def diagonal_winner?(game_board)
