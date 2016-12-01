@@ -38,4 +38,12 @@ describe GameBoard do
       expect(subject.valid_move?(5,5)).to eq false
     end
   end
+
+  # describe '#reset_game_board' do
+  #   it 'resets the game board' do
+  #     subject.game_board = [['O','X','X'],['X','O',''],['X','O','O']]
+  #     subject.reset_game_board
+  #     expect(subject.reset_game_board).to eq [['','',''],['','',''],['','','']]
+  #   end
+  # end
 end

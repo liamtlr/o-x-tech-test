@@ -8,7 +8,9 @@ class GameBoard
   end
 
   def add_move(o_or_x, row_num, column_num)
-    @game_board[row_num - 1][column_num - 1] = o_or_x
+    if o_or_x?(o_or_x) and valid_move?(row_num, column_num)
+      @game_board[row_num - 1][column_num - 1] = o_or_x
+    end
   end
 
   def o_or_x?(o_or_x)
