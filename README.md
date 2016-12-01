@@ -27,7 +27,7 @@ To run the script as a simple command line application, run:
 ```
 irb -r ./lib/interface.rb
 interface = Interface.new
-nterface.new_game
+interface.new_game
 ```
 
 And follow the onscreen instructions
