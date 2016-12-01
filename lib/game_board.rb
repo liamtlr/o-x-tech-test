@@ -16,6 +16,7 @@ class GameBoard
   end
 
   def valid_move?(row_num, column_num)
+    (1..3).include?(row_num) && (1..3).include?(column_num) && @game_board[row_num - 1][column_num - 1].empty?
   end
 
 end

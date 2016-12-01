@@ -28,13 +28,14 @@ describe GameBoard do
 
   describe '#valid_move?' do
     it 'returns true if the move is valid and not already taken' do
-      expect(valid_move?(0,0)).to eq true
+      expect(subject.valid_move?(1,1)).to eq true
     end
     it 'returns false if the move is valid but already taken' do
-      expect(valid_move?(0,0)).to eq false
+      subject.add_move("O", 1, 1)
+      expect(subject.valid_move?(1,1)).to eq false
     end
     it 'returns false if the move is not valid' do
-      expect(valid_move?(5,5)).to eq false
+      expect(subject.valid_move?(5,5)).to eq false
     end
   end
 end
